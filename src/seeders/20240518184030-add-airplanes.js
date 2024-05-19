@@ -40,7 +40,7 @@ module.exports = {
     await queryInterface.bulkDelete(
     'Airplanes', 
     {
-    [Op.or]:[{modelNumber:'boeing777'},{modelNumber:'airbus340'}]
+    [Op.or]:[{modelNumber:'boeing777'},{modelNumber:'airbus340'},{modelNumber:'airbusa380'}]
   }
 );
   }

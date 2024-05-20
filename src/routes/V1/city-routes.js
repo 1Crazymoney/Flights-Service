@@ -11,6 +11,16 @@ router
     CityMiddlwares.validateCreateRequest,
     CityController.createCity);
 
+// /api/v1/city/:id DELETE
+router
+    .delete('/:id', 
+    CityController.destroyCity);
+
+// /api/v1/city/:id PATCH
+router
+    .patch('/:id', 
+    CityController.updateCity);
+
 
 
 module.exports = router; 

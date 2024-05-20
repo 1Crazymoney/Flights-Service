@@ -2,6 +2,7 @@ const {StatusCodes} = require('http-status-codes');
 
 const AppError = require('../Utils/errors/app-error');
 const {CityRepository} = require('../repositories');
+const city = require('../models/city');
 
 const cityRepository = new CityRepository();
 
@@ -24,8 +25,38 @@ async function createCity(data){
 
 }
 
+async function destroyCity(id){
+    try {
+        const response = await cityRepository.destroy(id);
+        return response;
+    } catch (error) {
+        if (error.statusCode = StatusCodes.NOT_FOUND){
+            throw new AppError('The city you requested to delete is not present',error.statusCode);
+        }
+        throw new AppError('Cannot fetch data of all cities',StatusCodes.INTERNAL_SERVER_ERROR);
+        
+    }
+
+}
+
+async function updateCity(id){
+    try {
+        const response = await cityRepository.update(id);
+        return response;
+    } catch (error) {
+        if (error.statusCode = StatusCodes.NOT_FOUND){
+            throw new AppError('The city you requested to update is not present',error.statusCode);
+        }
+        throw new AppError('Cannot fetch data of all cities',StatusCodes.INTERNAL_SERVER_ERROR);
+        
+    }
+
+}
+
 
 module.exports ={
     createCity,
+    destroyCity,
+    updateCity
 
 }

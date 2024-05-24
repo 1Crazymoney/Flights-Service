@@ -1,4 +1,6 @@
 'use strict';
+const {enums} = require('../Utils/common');
+const {BUSINESS,PREMIUM_ECONOMY,FIRST_CLASS,ECONOMY} = enums.seatType;
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {

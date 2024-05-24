@@ -1,6 +1,6 @@
 # Flight Service
 
-This project is a Flight Service API built using Node.js. It is designed to handle flight bookings, flight status updates, and other related functionalities. This API is structured using best coding practices and project management recommendations.
+This project is a Flight Service API built using Node.js. It is designed to handle flights, managing airports, cities,airplanes, seats and their related functionalities. This API is structured using best coding practices and project management recommendations.
 
 ## Overview
 

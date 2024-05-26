@@ -1,4 +1,4 @@
-function addRowLockOnFlights(){
+function addRowLockOnFlights(flightId){
     return `Select * from Flights WHERE Flights.id = ${flightId};`
 }
 

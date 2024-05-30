@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use('/api', apiRoutes);
+app.use('/flightsService/api',apiRoutes);
 
 
 app.listen(serverConfig.PORT, () => {
